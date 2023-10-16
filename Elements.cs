@@ -25,13 +25,13 @@ public class Elements {
         return row;
     }
 
-    public TextBox inputBox = new TextBox();
+    public List<TextBox> inputBoxList = new List<TextBox>();
     public StackPanel CreateInputTextElement(string inputText) {
         StackPanel row = new StackPanel();
         var bc = new BrushConverter();
+        TextBox inputBox = new TextBox();
         inputBox.FontSize = 28;
         inputBox.Text = inputText;
-        inputBox.IsReadOnly = true;
         inputBox.HorizontalAlignment= new HorizontalAlignment();
         inputBox.BorderThickness= new Thickness(0);
         inputBox.TextWrapping= new TextWrapping();
@@ -40,6 +40,7 @@ public class Elements {
         inputBox.Width = 800;
         inputBox.Margin = new Thickness(40,20,0,0);
         row.Children.Add(inputBox);
+        inputBoxList.Add(inputBox);
         return row;
     }
     

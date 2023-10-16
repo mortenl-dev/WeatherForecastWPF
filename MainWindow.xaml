@@ -7,8 +7,13 @@
         mc:Ignorable="d"
         Title="Weather Forecast" Height="450" Width="800">
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
-    
+    <Grid> 
+    <TextBox Name="Latitude" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10, 0, 0, 0"/>
+    <TextBox Name="Longitude" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10, 50, 0, 0"/>
+    <Button Content="Get Input" Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,100"/>
     
     <StackPanel Name="MainPanel" Orientation="Horizontal" />
+    </Grid>
+    
     </ScrollViewer>
 </Window>
