@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:WeatherForecastWPF"
         mc:Ignorable="d"
         Title="Weather Forecast" Height="450" Width="800">
@@ -11,7 +12,7 @@
     <TextBox Name="Latitude" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10, 0, 0, 0"/>
     <TextBox Name="Longitude" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10, 50, 0, 0"/>
     <Button Content="Get Input" Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,100"/>
-    
+    <oxy:PlotView x:Name="plotView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10, 200, 0, 0"/>
     <StackPanel Name="MainPanel" Orientation="Horizontal" />
     </Grid>
     

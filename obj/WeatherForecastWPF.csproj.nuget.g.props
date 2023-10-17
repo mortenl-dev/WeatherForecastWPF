@@ -14,4 +14,7 @@
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft\Xamarin\NuGet\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgOxyPlot_Wpf Condition=" '$(PkgOxyPlot_Wpf)' == '' ">C:\Users\morte\.nuget\packages\oxyplot.wpf\2.1.2</PkgOxyPlot_Wpf>
+  </PropertyGroup>
 </Project>

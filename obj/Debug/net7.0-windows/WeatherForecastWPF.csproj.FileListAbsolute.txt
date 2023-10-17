@@ -21,3 +21,6 @@ C:\Users\morte\Desktop\Projects\WeatherForecastWPF\obj\Debug\net7.0-windows\Weat
 C:\Users\morte\Desktop\Projects\WeatherForecastWPF\obj\Debug\net7.0-windows\ref\WeatherForecastWPF.dll
 C:\Users\morte\Desktop\Projects\WeatherForecastWPF\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
 C:\Users\morte\Desktop\Projects\WeatherForecastWPF\obj\Debug\net7.0-windows\WeatherForecastWPF.csproj.CopyComplete
+C:\Users\morte\Desktop\Projects\WeatherForecastWPF\bin\Debug\net7.0-windows\OxyPlot.dll
+C:\Users\morte\Desktop\Projects\WeatherForecastWPF\bin\Debug\net7.0-windows\OxyPlot.Wpf.dll
+C:\Users\morte\Desktop\Projects\WeatherForecastWPF\bin\Debug\net7.0-windows\OxyPlot.Wpf.Shared.dll
