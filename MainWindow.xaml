@@ -3,16 +3,44 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
         xmlns:oxy="http://oxyplot.org/wpf"
         xmlns:local="clr-namespace:WeatherForecastWPF"
         mc:Ignorable="d"
         Title="Weather Forecast" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            CornerRadius="20"> <!-- Adjust the value for the desired corner radius -->
+                        <ScrollViewer x:Name="PART_ContentHost"/>
+                    </Border>
+                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Width" Value="320" />
+        <Setter Property="Height" Value="44" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+    </Style>
+</ResourceDictionary>
+    </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
     <Grid> 
-    <TextBox Name="Latitude" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10, 0, 0, 0"/>
-    <TextBox Name="Longitude" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10, 50, 0, 0"/>
-    <Button Content="Get Input" Click="Button_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,100"/>
-    <oxy:PlotView x:Name="plotView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10, 200, 0, 0"/>
+    <TextBox Text="Latitude" Name="Latitude" Margin="0, 36, 0, 0"/>
+    <TextBox Text="Longitude" Name="Longitude" Margin="0, 112, 0, 0" />
+    <TextBox Text="Insert days to forecast (Can not be more than 16)" Name="DaysCount" Margin="0, 188, 0, 0"/>
+    <Button Content="Generate Weather forecast graph" Click="Button_Click" VerticalAlignment="Top" Width="320" Height="44" HorizontalAlignment="Center" Margin="0,300,0,0"/>
+    <oxy:PlotView x:Name="plotView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10, 400, 0, 0"/>
     <StackPanel Name="MainPanel" Orientation="Horizontal" />
     </Grid>
     
