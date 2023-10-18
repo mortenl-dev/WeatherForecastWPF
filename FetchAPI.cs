@@ -23,6 +23,6 @@ public class API {
             catch (FormatException) {
                 
             }
-            return null;
+            return null!;
         }
 }

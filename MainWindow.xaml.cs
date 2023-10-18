@@ -16,7 +16,9 @@ using System.Windows.Shapes;
 using OxyPlot;
 using OxyPlot.Series;
 using OxyPlot.Axes;
+using OxyPlot.Annotations;
 using System.Windows.Media.Animation;
+using System.Text.RegularExpressions;
 
 
 namespace WeatherForecastWPF
@@ -27,7 +29,6 @@ namespace WeatherForecastWPF
     public partial class MainWindow : Window
     {
 
-        StackPanel OutputBox;
         public MainWindow()
         {
             
@@ -36,8 +37,9 @@ namespace WeatherForecastWPF
             
             InitializeComponent();
             
-            OutputBox = element.CreateTextElement("Weather Forecast by mortenl-dev");
-            MainPanel.Children.Add(OutputBox);
+            MainPanel.Children.Add(element.CreateTextElement("Weather Forecast by mortenl-dev"));
+            MainPanel.Children.Add(element.CreateTextElement("Created with the help of: https://open-meteo.com"));
+
             
         }
         API fetch = new API();
@@ -96,6 +98,8 @@ namespace WeatherForecastWPF
                 StrokeThickness = 2,
                 MarkerSize = 4
             };
+
+
             // Add data points (you can replace this with your data)
             for (int x = 0; x < fetched!.Hourly!.Time!.Count; x ++)
             {   
@@ -103,7 +107,6 @@ namespace WeatherForecastWPF
                 float y = (float) Convert.ToDouble(fetched.Hourly.Temperature_2m![x]);
                 series.Points.Add(new DataPoint(time, y));
             }
-            
             // Add the series to the plot model
             plotModel.Series.Add(series);
 
@@ -111,7 +114,10 @@ namespace WeatherForecastWPF
             plotView.Model = plotModel;
         }
     }
+
+    
 }
+
         
     
 

@@ -6,12 +6,10 @@ using System.Windows;
 using System.Windows.Controls;
 public class Elements {
 
-
-    public StackPanel CreateTextElement(string inputText) {
-        StackPanel row = new StackPanel();
+    public TextBox CreateTextElement(string inputText) {
         var bc = new BrushConverter();
         TextBox Section = new TextBox();
-        Section.FontSize = 28;
+        Section.FontSize = 16;
         Section.Text = inputText;
         Section.IsReadOnly = true;
         Section.HorizontalAlignment= new HorizontalAlignment();
@@ -19,10 +17,9 @@ public class Elements {
         Section.TextWrapping= new TextWrapping();
         Section.FontFamily = new FontFamily("Trebuchet MS");
         Section.VerticalAlignment= new VerticalAlignment();
-        Section.Width = 800;
-        Section.Margin = new Thickness(40,20,0,0);
-        row.Children.Add(Section);
-        return row;
+        Section.Width = 400;
+        Section.Margin = new Thickness(5,0,0,0);
+        return Section;
     }
 
     public List<TextBox> inputBoxList = new List<TextBox>();

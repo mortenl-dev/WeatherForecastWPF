@@ -36,12 +36,12 @@
     </Window.Resources>
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" >
     <Grid> 
-    <TextBox Text="Latitude" Name="Latitude" Margin="0, 36, 0, 0"/>
-    <TextBox Text="Longitude" Name="Longitude" Margin="0, 112, 0, 0" />
-    <TextBox Text="Insert days to forecast (Can not be more than 16)" Name="DaysCount" Margin="0, 188, 0, 0"/>
-    <Button Content="Generate Weather forecast graph" Click="Button_Click" VerticalAlignment="Top" Width="320" Height="44" HorizontalAlignment="Center" Margin="0,300,0,0"/>
-    <oxy:PlotView x:Name="plotView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10, 400, 0, 0"/>
-    <StackPanel Name="MainPanel" Orientation="Horizontal" />
+    <TextBox Text="Latitude" Name="Latitude" Margin="0, 50, 0, 0"/>
+    <TextBox Text="Longitude" Name="Longitude" Margin="0, 150, 0, 0" />
+    <TextBox Text="Insert days to forecast (Can not be more than 16)" Name="DaysCount" Margin="0, 250, 0, 0"/>
+    <Button Content="Generate Weather forecast graph" Click="Button_Click" VerticalAlignment="Top" Width="320" Height="44" HorizontalAlignment="Center" Margin="0,350,0,0"/>
+    <oxy:PlotView x:Name="plotView" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10, 450, 0, 0"/>
+    <StackPanel Name="MainPanel" Orientation="Vertical" />
     </Grid>
     
     </ScrollViewer>
